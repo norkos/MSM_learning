@@ -48,6 +48,9 @@ CXXFLAGS_TEST		:= $(CXXFLAGS_COMMON) -I$(GMOCK)/include -I$(GMOCK)/gtest/include
 ## Targets
 all: $(BUILD)/$(DIST)/$(TGT)
 
+seq:
+	dot -Tpng -o OUT.png graph.dot
+
 rebuilt: clean all
 
 test: $(BUILD)/$(TEST)/$(TGT_TEST)

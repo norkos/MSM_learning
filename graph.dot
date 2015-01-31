@@ -1,0 +1,13 @@
+digraph {
+    IDLE
+    WAIT_FOR_PIN
+    COLLECT_MONEY
+    GIVE_CARD
+    GIVE_MONEY
+    
+    IDLE -> WAIT_FOR_PIN [label="enter_card"]
+    WAIT_FOR_PIN -> COLLECT_MONEY [label="enter_PIN"]
+    COLLECT_MONEY -> GIVE_CARD [label="cash_collected"]
+    GIVE_CARD -> GIVE_MONEY [label="card_taken"]
+    GIVE_MONEY -> IDLE [label="money_taken"]
+}
